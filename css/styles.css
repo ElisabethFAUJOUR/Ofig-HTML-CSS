@@ -1,0 +1,124 @@
+html{
+    --color-red:#c80000;
+    --color-greydark:#666;
+    --color-greylight:#ccc;
+    --padding-grey-dark:12px;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/****************/
+/**** HEADER ****/
+/****************/
+
+header {
+    background-color: var(--color-red);
+    padding: 20px;
+    padding-top: 30px;
+}
+
+h1 { 
+    font-size: 3rem;
+    font-weight: bold;
+    color:white;
+}
+
+.subtitle-header {
+    font-size: 1.1rem;
+    padding:0 15px;
+}
+
+/****************/
+/**** MAIN ****/
+/****************/
+
+/** TITRE **/
+
+.title-fig {
+    background-color: var(--color-greydark);
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 12px;
+}
+
+.italic-font {
+    font-style: italic;
+}
+
+/** CONTENU **/
+
+.fig-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin: 40px 200px;
+}
+
+.fig-box img {
+    width:70%;
+    
+}
+.article-fig {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.game-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-greylight);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-greylight);
+    padding: 3px 0;
+    margin:10px;
+}
+
+.article-fig h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 3px 0;
+    margin:10px;
+}
+
+.description-fig {
+    font-size: 1rem;
+    padding: 3px 0;
+    margin:10px;
+    margin-bottom:20px;
+}
+
+button {
+    background-color: #c80000;
+    color:white;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+    padding:20px;
+    text-align: left;
+}
+
+.price {
+
+}
+
+.original-price {
+
+}
+
+/****************/
+/**** FOOTER ****/
+/****************/
+
+footer {
+    background-color: var(--color-greydark);
+    color: white;
+    text-align: center;
+    padding: var(--padding-grey-dark);
+}
