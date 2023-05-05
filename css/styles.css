@@ -9,6 +9,11 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+#container {
+    margin: 10 auto;
+    text-align: center;
+}
+
 /****************/
 /**** HEADER ****/
 /****************/
@@ -17,6 +22,7 @@ header {
     background-color: var(--color-red);
     padding: 20px;
     padding-top: 30px;
+    text-align: left;
 }
 
 h1 { 
@@ -52,17 +58,21 @@ h1 {
 
 .fig-box {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items:center;
-    margin: 40px 200px;
+    
+    margin: 40px auto;
+    width:1200px;
+    min-width: auto;
 }
 
 .fig-box img {
     width:70%;
-    
+    margin:0 auto;
 }
+
 .article-fig {
     width: 30%;
     border: 1px solid #ccc;
@@ -75,6 +85,7 @@ h1 {
     font-weight: bold;
     color: var(--color-greylight);
     text-transform: uppercase;
+    text-align: left;
     border-bottom: 1px solid var(--color-greylight);
     padding: 3px 0;
     margin:10px;
@@ -83,33 +94,52 @@ h1 {
 .article-fig h3 {
     font-size: 1.6rem;
     font-weight: bold;
+    text-align: left;
     padding: 3px 0;
     margin:10px;
 }
 
 .description-fig {
     font-size: 1rem;
+    text-align: left;
     padding: 3px 0;
     margin:10px;
     margin-bottom:20px;
 }
 
-button {
+.button {
     background-color: #c80000;
     color:white;
-    font-size: 1rem;
     border: none;
     width: 100%;
     padding:20px;
     text-align: left;
 }
 
-.price {
-
+.button .add-to-cart {
+    font-size: 1rem;
+    margin-right: 10px;
+    order:1;
+    margin-right: 70px;
 }
 
-.original-price {
+.button .price {
+    font-size: 1rem;
+    font-weight: bold;
+    order:2;
+    margin-left: 45px;
+}
 
+.button .original-price {
+    font-size: 1rem;
+    text-decoration: line-through;
+    order:3;
+}
+
+.button .discount-price {
+    font-size: 1rem;
+    font-weight: bold;
+    order:2;
 }
 
 /****************/
