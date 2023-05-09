@@ -10,39 +10,50 @@ body {
 }
 
 #container {
-    margin: 10 auto;
-    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width:100vw;
+    height:100vh;
 }
 
 /****************/
 /**** HEADER ****/
 /****************/
 
-header {
-    background-color: var(--color-red);
-    padding: 20px;
-    padding-top: 30px;
-    text-align: left;
-}
-
-h1 { 
-    font-size: 3rem;
-    font-weight: bold;
+.header {
+    display:flex;
+    flex-direction: column;
     color:white;
+    width:100vw;
+    height:20vh;
 }
 
-.subtitle-header {
+/**** Title ****/
+
+.header__title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: var(--color-red);
+    font-weight: bold;
+    padding: 20px;
+}
+
+.header__title-main { 
+    font-size: 2.5rem;
+    padding-right:15px;
+}
+
+.header__title-second {
     font-size: 1.1rem;
-    padding:0 15px;
 }
 
-/****************/
-/**** MAIN ****/
-/****************/
+/**** Theme ****/
 
-/** TITRE **/
-
-.title-fig {
+.header__theme {
     background-color: var(--color-greydark);
     color: white;
     font-size: 1.7rem;
@@ -50,105 +61,152 @@ h1 {
     padding: 12px;
 }
 
-.italic-font {
+.header__theme-FF {
     font-style: italic;
 }
 
-/** CONTENU **/
 
-.fig-box {
+/****************/
+/**** MAIN ****/
+/****************/
+
+/** Description de l'article **/
+
+.product-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items:center;
-    
-    margin: 40px auto;
-    width:1200px;
-    min-width: auto;
+    margin: 2% auto;
+    width:75%;
 }
 
-.fig-box img {
-    width:70%;
+.product-list__item {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 0.5%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.product-list__item-image {
+    width:100%;
     margin:0 auto;
 }
 
-.article-fig {
-    width: 30%;
-    border: 1px solid #ccc;
-    padding: 5px;
-    margin-bottom: 20px;
-}
-
-.game-name {
+.product-list__item-subtitle {
     font-size: 1.1rem;
     font-weight: bold;
     color: var(--color-greylight);
     text-transform: uppercase;
-    text-align: left;
     border-bottom: 1px solid var(--color-greylight);
-    padding: 3px 0;
-    margin:10px;
+    padding: 0.8% 0;
+    margin:3%;
 }
 
-.article-fig h3 {
+.product-list__item-main-title {
     font-size: 1.6rem;
     font-weight: bold;
-    text-align: left;
-    padding: 3px 0;
-    margin:10px;
+    padding: 0.8% 0;
+    margin:3%;
 }
 
-.description-fig {
+.product-list__item-description {
     font-size: 1rem;
-    text-align: left;
-    padding: 3px 0;
-    margin:10px;
-    margin-bottom:20px;
+    padding: 0.8% 0;
+    margin:3%;
+    margin-bottom:6%;
 }
+
+/** Ajouter au panier **/
 
 .button {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
     background-color: #c80000;
     color:white;
     border: none;
     width: 100%;
-    padding:20px;
-    text-align: left;
+    padding:4%;
 }
 
-.button .add-to-cart {
+.button__add-to-cart {
     font-size: 1rem;
-    margin-right: 10px;
-    order:1;
-    margin-right: 70px;
+    width: 50%;
 }
 
-.button .price {
+.button__price {
     font-size: 1rem;
     font-weight: bold;
-    order:2;
-    margin-left: 45px;
+    width: 25%;
 }
 
-.button .original-price {
+.button__price--strike {
     font-size: 1rem;
     text-decoration: line-through;
-    order:3;
+    width: 20%;
 }
 
-.button .discount-price {
-    font-size: 1rem;
+.product-list__item-discount { 
+    position: absolute;
+    right:10%;
+    top:5%;
+
+    background-color: var(--color-greydark);
+    color: white;
+    font-size: 1.5rem;
     font-weight: bold;
-    order:2;
+
+    
+    width:5rem;
+    height: 5rem;
+    border-radius: 100%;
+    border: 4px solid var(--color-greylight) ;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation:blink 1s infinite;
+    animation-iteration-count: infinit;
 }
+
+@keyframes blink { 
+    50% { 
+        border-color: var(--color-red);
+    }
+}   
+
+.product-list__item-sales {
+    position: fixed;
+    font-weight: bold;
+    text-transform: uppercase;
+    left:0;
+    top:50%;
+    color:white;
+    background-color: var(--color-red);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    padding:10px;
+
+
+}
+
 
 /****************/
 /**** FOOTER ****/
 /****************/
 
-footer {
+.footer {
     background-color: var(--color-greydark);
     color: white;
     text-align: center;
-    padding: var(--padding-grey-dark);
+    padding: 15px;
+    width: 100%;
 }
