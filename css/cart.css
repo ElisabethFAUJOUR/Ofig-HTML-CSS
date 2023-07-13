@@ -1,0 +1,268 @@
+:root {
+    --color-red:#c80000;
+    --color-greydark:#666;
+    --color-greylight:#ccc;
+    --color-table:#eeeeee;
+    --color-separation:#e4e4e4;
+    --color-grey-title:#666c73;
+    --padding-grey-dark:12px;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+#container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width:100vw;
+    height:100vh;
+}
+
+/****************/
+/**** HEADER ****/
+/****************/
+
+.header {
+    display:flex;
+    flex-direction: column;
+    color:white;
+    width:100vw;
+    height:20vh;
+}
+
+/**** Title ****/
+
+.header__title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: var(--color-red);
+    font-weight: bold;
+    padding: 20px;
+}
+
+.header__title-main { 
+    font-size: 2.5rem;
+    padding-right:15px;
+}
+
+.header__title-second {
+    font-size: 1.1rem;
+}
+
+/**** Theme ****/
+
+.header__theme {
+    background-color: var(--color-greydark);
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 12px;
+}
+
+.header__theme-FF {
+    font-style: italic;
+}
+
+
+/****************/
+/**** MAIN ****/
+/****************/
+
+.main__cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:70vw;
+    margin: 5% 0;
+}
+
+.main__cart-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: start;
+    padding-bottom:5%;
+    padding-top:3%;
+
+}
+
+.main__cart-section {
+    border-bottom: solid 1px var(--color-separation);
+    padding:3%;
+}
+
+
+/** Tableau **/
+
+.table-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.table {
+    border-collapse: collapse;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width:100%;
+}
+
+.table-data-cell, .table-header-cell {
+    padding: 10px;
+    border: none;
+}
+
+    .total {
+        font-weight: bold;
+    }
+
+    .price {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color:var(--color-red);
+    }
+
+.table-header-cell {
+    font-weight: bold;
+	background-color: white;
+	color: #333;
+    border-bottom: solid 1px var(--color-separation);
+}
+
+.table-quantity input {
+    width: 3rem;
+    border-radius:2px;
+    padding:3px;
+}
+
+.table-quantity a {
+    color:var(--color-red);
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+/**##Couleur grise lignes tableau##**/
+.table-rows:nth-child(even) {
+    background-color: white;
+}
+
+.table-rows:nth-child(odd) {
+    background-color: var(--color-table);
+}
+
+
+
+/** Formulaire **/
+    
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-container-vertical {
+    display: flex;
+    flex-direction: column;
+    width:45%;
+}  
+
+.form-container legend {
+    color:var(--color-grey-title);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding:8% 0;
+}
+
+.form-container-fieldset {
+    padding: 2% 0;
+}
+
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+
+.form-container-fieldset textarea {
+    width: 100%;
+}
+
+.form-label {
+    padding-bottom: 2%;
+}
+
+.form-background {
+    background-color: var(--color-table);
+    border: none;
+    border-bottom: 1px solid var(--color-greylight);
+    padding:2%;
+  }
+
+
+
+/** Montant à regler **/
+
+.amount-section {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    padding:5%;
+}
+
+.amount-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.amount-price {
+    color:var(--color-red);
+    font-size:1.5rem;
+    font-weight: bold;
+}
+
+
+/** Boutons **/
+
+.buttons-section {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-back {
+    background-color: var(--color-table);
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: hidden;
+    padding:2% 3%;
+}
+
+.button-pay {
+    background-color: var(--color-red);
+    color:white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: hidden;
+    padding:2% 3%;
+}
+
+
+
+
+/****************/
+/**** FOOTER ****/
+/****************/
+
+.footer {
+    background-color: var(--color-greydark);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
